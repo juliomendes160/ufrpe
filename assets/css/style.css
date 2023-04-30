@@ -32,6 +32,7 @@ body{
 #g{
     display: grid;
     justify-items: center;
+    margin-top: 5vh;
 }
 
 #v, #f{
@@ -39,10 +40,10 @@ body{
 }
 
 #d2{
-    text-align: center;
     margin-top: 10vh;
     display: flex;
     column-gap: 10vw;
+    justify-content: center;
 }
 
 #d2 button{

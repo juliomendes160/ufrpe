@@ -10,6 +10,7 @@ $(document).ready(function(){
         console.log($("#d1").load("/ufrpe/assets/html/p1.html"));
         this.innerHTML="Terminar";
         this.id="Terminar";
+        $(document).scrollTop(100);
     });
 
     $(document).on("click", "#Terminar", function(){
@@ -74,51 +75,3 @@ $(document).ready(function(){
         }
     });
 });
-
-// async function Search(Callback, url){
-//     let result = await $.ajax(url);
-//     let html = new DOMParser().parseFromString(result, "text/html").documentElement;
-//     Callback(url, html);
-// }
-
-// function SetHtml(url, html){
-//     SetUrl(url);
-//     $("html").replaceWith(html);
-// }
-
-// function SetMain(url, html){
-//     $("main").html($(html).find("main").html());
-//     SetUrl(url);
-//     if($("html").is(":hidden")) $("html").delay("slow").fadeToggle();
-// }
-
-// function SetUrl(url){
-//     history.pushState({},"", url);
-// }
-
-// function Listen(){
-//     $(document).on("click", "[data-navegacao-menu] a", function(event){
-//         event.preventDefault();
-//         let url = root + $(this).attr("href");
-//         Search(SetMain, url);
-//         navegacao.menu();
-//     });
-
-//     $(document).on("click", "[data-navegacao-funcao] a", function(event){   
-//         event.preventDefault();
-//         navegacao[this.dataset.navegacaoFuncao]();
-//     });
-
-//     const navegacao = {
-//         menu:  function(event) {
-//             if($("[data-navegacao-menu]").is(":hidden")){
-//                 $("[data-navegacao-menu]").fadeIn();
-//                 $("[data-navegacao-menu]").scrollTop(0);
-//             }
-//             else{
-//                 $("[data-navegacao-menu]").fadeOut();
-//             }
-//         },
-//     }
-// }
-
